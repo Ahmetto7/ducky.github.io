@@ -1,0 +1,84 @@
+:root {
+    --safir: #0f52ba;
+    --mercan: #ff7f50;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0a0a0a; /* Derinlik için koyu zemin */
+    overflow: hidden;
+}
+
+/* Arka plandaki hareketli renkler */
+.bg-blob {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: -1;
+    animation: move 10s infinite alternate;
+}
+
+.sapphire {
+    background-color: var(--safir);
+    top: -100px;
+    left: -100px;
+}
+
+.coral {
+    background-color: var(--mercan);
+    bottom: -100px;
+    right: -100px;
+    animation-delay: 2s;
+}
+
+@keyframes move {
+    from { transform: translate(0, 0); }
+    to { transform: translate(200px, 100px); }
+}
+
+/* Buzlu Cam (Glassmorphism) Kartı */
+.glass-card {
+    background: rgba(255, 255, 255, 0.05); /* Şeffaf beyaz */
+    backdrop-filter: blur(15px); /* İşte o meşhur buzlu cam efekti */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3rem;
+    border-radius: 25px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    max-width: 400px;
+    width: 90%;
+}
+
+.divider {
+    height: 2px;
+    background: linear-gradient(90deg, var(--safir), var(--mercan));
+    margin: 20px auto;
+    width: 50%;
+}
+
+button {
+    background: linear-gradient(45deg, var(--safir), var(--mercan));
+    border: none;
+    padding: 12px 30px;
+    color: white;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 127, 80, 0.5);
+}
