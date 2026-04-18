@@ -3,22 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Safir & Mercan Dünyası</title>
+    <title>Sleepy Ducky: White Sapphire Dream</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="bg-blob sapphire"></div>
-    <div class="bg-blob coral"></div>
+    <div class="sky-background"></div>
 
-    <div class="glass-card">
-        <h1>Hoş Geldin!</h1>
-        <p>Safir ve Mercan'ın buzlu camla buluştuğu özel tasarım.</p>
-        <div class="divider"></div>
-        <p>Bu site tamamen senin zevkine göre tasarlandı.</p>
-        <button id="magic-btn">Bana Tıkla!</button>
+    <div class="glass-container">
+        <h1 class="game-title">SLEEPY DUCKY</h1>
+        
+        <div class="game-board">
+            <div class="score-display">SKOR: <span id="score">0</span></div>
+            <canvas id="gameCanvas"></canvas>
+            
+            <div class="overlay" id="startOverlay">
+                <h2>Zzz... Uyanma Vakti!</h2>
+                <p>Uykucu ördeği uçurmak için tıkla!</p>
+                <button id="start-btn">Rüyayı Başlat</button>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
 </body>
 </html>
+
